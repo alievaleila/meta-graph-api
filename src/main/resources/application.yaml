@@ -32,3 +32,12 @@ logging:
   level:
     az.edu.ingressacademy: DEBUG
     org.springframework.web: INFO
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: alpha
+  api-docs:
+    path: /v3/api-docs
+
+  packages-to-scan: az.edu.ingressacademy.controller
