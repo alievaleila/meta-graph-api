@@ -29,8 +29,8 @@ public class MetaGraphClient {
                             .path("/" + metaProperties.pageId() + "/posts")
                             .queryParam("fields", fields)
                             .queryParam("limit", metaProperties.postLimit())
+                            .queryParam("access_token", metaProperties.accessToken())
                             .build())
-                    .header("Authorization", "Bearer " + metaProperties.accessToken())
                     .retrieve()
                     .body(MetaApiResponse.PostsPage.class);
 
